@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filippo Di Marzio's Interests</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+   <style>
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #50e3c2, #2c3e50);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    background-color: #72b9aa;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+main {
+    margin-top: 80px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    background-color: #72b9aa;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+.section-title button {
+    background-color: #72b9aa;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hidden {
+        display: none;
+    }
+    .visible {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+article.paragraph ul {
+    list-style: none;
+    padding: 0;
+}
+
+article.paragraph div {
+    display: none;
+}
+
+article.paragraph div.visible {
+    display: block;
+}
+
+#read-more {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.section-title button:hover {
+    background-color: #34495e;
+}
+
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Filippo Di Marzio's Interests</h1>
+    </header>
+
+    <main>
+        <article class="paragraph">
+            <div class="paragraph visible">I am an individual who is deeply passionate about various aspects of life, particularly kart racing, Formula 1, football, and financial markets like stocks and cryptocurrencies. My love for these activities fuels my personal growth and ambition to become a Blockchain Developer.</div>
+            <div class="paragraph visible">Football, especially my dedication to Chelsea, has shaped my values and taught me the importance of teamwork. It's more than just a sport to me—it’s a lifestyle.</div>
+            <div class="paragraph visible">The stock and cryptocurrency market is another area where I have gained invaluable knowledge. I am particularly fascinated by the potential of Blockchain and its use in Decentralized Applications (DApps).</div>
+            <div class="paragraph hidden">Alongside my passions, I focus on continuous self-improvement, engaging in mindset changes and pursuing financial literacy to enhance my life both personally and professionally.</div>
+            <div class="paragraph hidden">In summary, my life is a blend of passions and pursuits, from kart racing and football to cryptocurrency and Blockchain development, as I strive for personal growth and success.</div>
+            <button id="read-more" class="ui button">Read More</button>
+        </article>
+    </main>
+
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="personalinfo.html">Personal Information</a></li>
+                <li><a href="myhobbies.html">My Hobbies</a></li>
+                <li><a href="projects.html">Projects & Internship</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const button = document.getElementById("read-more");
+            const hiddenParagraphs = document.querySelectorAll(".paragraph.hidden");
+            
+            button.addEventListener("click", function() {
+                hiddenParagraphs.forEach(paragraph => {
+                    paragraph.classList.toggle("hidden");
+                    paragraph.classList.toggle("visible");
+                });
+                
+                button.textContent = button.textContent === "Read More" ? "Read Less" : "Read More";
+            });
+        });
+    </script>
+</body>
+</html>

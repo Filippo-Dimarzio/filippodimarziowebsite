@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>Filippo Di Marzio's Website</title>
+    <style>
+
+      body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #50e3c2, #2c3e50);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    background-color: #72b9aa;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+main {
+    margin-top: 80px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    background-color: #72b9aa;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+.social-links a {
+    font-size: 2rem;
+    color: #72b9aa; 
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #34495e; 
+    transform: scale(1.2);
+}
+
+.social-links a:active {
+    transform: scale(0.9);
+}
+
+.address-box {
+    margin-top: 40px;
+    padding: 2rem;
+    background-color: #34495e;
+    color: white;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.address-box .social-links a {
+    font-size: 2rem;
+    color: #72b9aa; 
+}
+
+
+.section-title button {
+    background-color: #72b9aa;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.section-title button:hover {
+    background-color: #34495e;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Filippo Di Marzio's Website</h1>
+    </header>
+
+    <main>
+        
+
+        <div class="bio">
+            <div class="section-title">
+                <button onclick="window.scrollTo(0, document.querySelector('.bio').offsetTop);">Introduction</button>
+                <br>
+                <br>
+                
+            </div>
+            <p>I'm Filippo Di Marzio, a passionate Software System Development student at SETU with a strong interest in AI, Space Exploration, and Blockchain. I am always looking for opportunities to learn and grow.</p>
+        </div>
+
+      
+       
+                <br>
+                <br>
+
+       
+        <div class="skills">
+            
+            <div class="section-title">
+                <button onclick="window.scrollTo(0, document.querySelector('.skills').offsetTop);">Skills</button>
+                
+            </div>
+            
+            <br>
+            <br>
+
+            <div class="skills-list">
+                <strong>Web Development </strong>  (HTML, CSS, JavaScript)<br>
+                <strong> Backend Development </strong> (Node.js, Express)<br>
+                <strong> Console App Development </strong> (Java & Kotlin)<br>
+                <strong>Database Management  </strong>(SQL & Node.js)<br>
+                <strong> Security </strong> (PacketTracer , Red Hat) <br>
+                <strong>Version Control </strong>  (Git, GitHub)
+            </div>
+        </div>
+
+        
+        <br>
+        <br>
+        
+
+
+        
+        <br>
+        <br>
+        <br>
+
+        <nav>
+            <div class="projects"></div>
+            <div class="bio"></div>
+            <ul>
+                <li><a href="personalinfo.html" target="_blank">Personal Information</a></li>
+                <li><a href="myhobbies.html" target="_blank">My Hobbies</a></li>
+                <li><a href="projects.html">Projects & Internship</a></li>
+            </ul>
+        </nav>
+
+        <address class="address-box">
+            <div class="ui list">
+                <div class="item">
+                    <i class="fas fa-address-book"></i> Filippo Di Marzio
+                </div>
+                <div class="item">
+                    <i class="fas fa-certificate"></i> Software System Development Student at SETU
+                </div>
+                <div class="item">
+                    <i class="fas fa-map-marker-alt"></i> Waterford, Ireland
+                </div>
+            </div>
+
+            <br>
+            <br>
+        
+            <div class="social-links">
+                <a href="https://github.com/Filippo-Dimarzio" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/filippo-di-marzio/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/switch.sol" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </address>
+        
+        
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelling Spots</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #50e3c2, #2c3e50);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        header {
+            width: 100%;
+            background-color: #72b9aa;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 1px solid #ddd;
+            position: relative;
+        }
+
+        article h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #34495e;
+        }
+
+        article p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .hidden-paragraphs {
+            display: none;
+        }
+
+        .read-more-btn,
+        .read-less-btn {
+            background-color: #72b9aa;
+            color: white;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.6rem;
+            margin-top: 2rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .read-more-btn:hover,
+        .read-less-btn:hover {
+            background-color: #34495e;
+            box-shadow: 0 0 20px rgba(74, 144, 226, 0.7);
+        }
+
+        .read-more-btn:active,
+        .read-less-btn:active {
+            transform: scale(0.98);
+            transition: transform 0.1s ease-in-out;
+        }
+
+        nav {
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            background-color: #72b9aa;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Travelling Spots</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Notable Destinations</h2>
+
+            <p>During my travels in Spain, I had the privilege of exploring cities such as Alicante, Valencia, and Barcelona...</p>
+            
+            <p>Italy is a country close to my heart, having visited it multiple times. I have had the pleasure of hiking in the majestic Alps...</p>
+
+            <p>The South of France, including Monaco and Nice, offers a stunning blend of luxury, culture, and coastal beauty...</p>
+
+            <p>In Greece, I had the opportunity to visit the picturesque islands of Santorini and Mykonos...</p>
+
+            <div class="paragraph hidden-paragraphs">
+                <p>In Norway, I had the rare opportunity to witness the ethereal Northern Lights...</p>
+            </div>
+            
+            <div class="paragraph hidden-paragraphs">
+                <p>Morocco provided an unforgettable adventure...</p>
+            </div>
+
+            <button class="read-more-btn" id="readMoreBtn">Read More</button>
+            <button class="read-less-btn hidden-paragraphs" id="readLessBtn">Read Less</button>
+        </article>
+    </main>
+
+    <nav>
+        <ul>
+            <li><a href="personalinfo.html">Personal Info</a></li>
+            <li><a href="myhobbies.html">My Hobbies</a></li>
+            <li><a href="projects.html">Projects & Internship</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const readMoreBtn = document.getElementById("readMoreBtn");
+        const readLessBtn = document.getElementById("readLessBtn");
+        const hiddenParagraphs = document.querySelectorAll(".hidden-paragraphs");
+
+        readMoreBtn.addEventListener("click", () => {
+            hiddenParagraphs.forEach(p => p.style.display = "block");
+            readMoreBtn.style.display = "none";
+            readLessBtn.style.display = "inline-block";
+        });
+
+        readLessBtn.addEventListener("click", () => {
+            hiddenParagraphs.forEach(p => p.style.display = "none");
+            readMoreBtn.style.display = "inline-block";
+            readLessBtn.style.display = "none";
+        });
+    </script>
+</body>
+</html>
